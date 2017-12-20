@@ -8,7 +8,6 @@ media/
 static/
 files/
 images/
-settings.py
 
 # C extensions
 *.so
