@@ -4,6 +4,7 @@ import requests
 import json
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
+from django.urls import reverse
 
 from .tasks import handle_uploaded_file
 
@@ -64,7 +65,7 @@ def new_group(request):
                                      request.session.get('account_id'),
                                      group_id,
                                      request.session.get('access_token'))
-            return HttpResponseRedirect('targetgroups:group_list')
+            return HttpResponseRedirect(reverse('targetgroups:group_list'))
     else:
         form = NewTargetGroupForm()
     return render(request, 'targetgroups/groups.html', {'form': form})
