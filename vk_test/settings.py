@@ -71,6 +71,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'vk_test.wsgi.application'
 
 
+
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
